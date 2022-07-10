@@ -2,3 +2,5 @@
 test how transform gcode to 3d
 
 sa ma inspir https://github.com/penneydude/three-gcode-loader
+
+cube https://codepen.io/nufftalon/pen/xGmrpo
