@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="triangle.js"></script>
+<script id="shader-fs" type="x-shader/x-fragment">
+void main(void) {
+  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+}
+</script>
+<script id="shader-vs" type="x-shader/x-vertex">
+attribute vec3 aVertexPosition; // posizione (x,y,z) del vertice
+// Imprime al vertice le modifiche dovute al movimento dell'oggetto sulla scena
+uniform mat4 uMVMatrix;
+// Imprime al vertice le modifiche dovute al punto di vista
+uniform mat4 uPMatrix;
+void main(void) {
+gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+}
+</script>
+</head>
+<body onload="webGLStart();">
+<canvas id="mycanvas" style="border: none;"  ></canvas>
+</body>
+</html>
