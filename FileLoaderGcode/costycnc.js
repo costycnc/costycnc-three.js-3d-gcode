@@ -64,8 +64,8 @@ let geometry = new THREE.Geometry();
             }
 
             //svgcode.append("line").attr("x1", val3).attr("y1", val4).attr("x2", val5).attr("y2", val6).attr("stroke", "white").attr("stroke-width", "1");
-           geometry.vertices.push(new THREE.Vector3(parseInt(val3),parseInt(val4), 0));
-
+           //geometry.vertices.push(new THREE.Vector3(parseInt(val3),parseInt(val4), 0));
+           geometry.vertices.push(new THREE.Vector3(parseFloat(val3),parseFloat(val4), 0));
 
             val3 = val5;
 
@@ -78,8 +78,12 @@ let geometry = new THREE.Geometry();
 			//line.position.set(10, 10, 10);	
 		
 
-        cube.add(line);
-       scene.add( cube );
+        //cube.add(line);
+       scene.add( line );
+	   console.log("scene.length="+scene.children.length);
+	   console.log(scene.children[1].geometry.vertices.length);
+	   
+	   console.log(scene.children[1].geometry.vertices);
 
       }
      
