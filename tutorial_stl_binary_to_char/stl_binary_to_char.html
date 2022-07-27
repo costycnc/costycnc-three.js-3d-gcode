@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<input type="file" accept="stl" onchange="openFile(event)">
+
+
+		<script>
+        //https://www.meshconvert.com/
+		//https://www.fabbers.com/tech/STL_Format#Sct_binary
+		var openFile = function (event) {
+
+
+        var input = event.target;
+        var reader = new FileReader();
+
+        reader.onload = function() {
+          dataURL = reader.result;
+		  costycncdesign(dataURL);
+
+
+        };
+
+		reader.readAsText(input.files[0]);
+		  }
+		  
+		  function costycncdesign(gcode) {
+		  const view = new DataView(gcode);
+
+
+console.log(view.getUint32(20));
+
+		  
+		  console.log(gcode.lenght);
+		}
+		</script>
+	</body>
+</html>
