@@ -22,14 +22,17 @@
 
         };
 
-		reader.readAsText(input.files[0]);
+		reader.readAsArrayBuffer(input.files[0]);
 		  }
 		  
 		  function costycncdesign(gcode) {
 		  const view = new DataView(gcode);
 
 
-console.log(view.getUint32(20));
+//console.log(view.getUint32(80).toString(16));
+console.log(view.getUint32(80));
+
+
 
 		  
 		  console.log(gcode.lenght);
