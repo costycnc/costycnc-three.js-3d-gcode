@@ -1,4 +1,7 @@
 # costycnc-three.js-3d-gcode
+
+Search three.js library https://searchcode.com/codesearch/view/88193284/
+
 test how transform gcode to 3d
 
 sa ma inspir https://github.com/penneydude/three-gcode-loader
